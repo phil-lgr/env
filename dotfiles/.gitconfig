@@ -1,0 +1,22 @@
+[user]
+	email = phil@leger.work
+	name = phil-lgr
+[core]
+	preloadindex = true
+	fscache = true
+	autocrlf = false
+[gc]
+	auto = 256
+[alias]
+	a = commit --all
+	p = push
+	s = status
+	c = commit
+	ck = checkout
+	a = 'commit
+	a = 'commit
+	tree-stat = log --graph --all --decorate --stat --date=iso
+	tree = log --graph --all --decorate=short --date=iso --oneline
+	up = pull upstream master
+	a = add --all
+	ca = commit --amend --no-edit

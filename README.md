@@ -1,2 +1,7 @@
-# env
-Config files
+# Config
+
+dotfiles and scripts
+
+```
+chmod 755 ./scripts/*.sh
+```
