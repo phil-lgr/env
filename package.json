@@ -1,0 +1,27 @@
+{
+    "name": "config",
+    "version": "1.0.0",
+    "description": "dotfiles and scripts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/phil-lgr/config.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/phil-lgr/config/issues"
+    },
+    "homepage": "https://github.com/phil-lgr/config#readme",
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-conventional-changelog"
+        }
+    },
+    "scripts": {
+        "commit": "git-cz"
+    },
+    "devDependencies": {
+        "commitizen": "^4.0.3",
+        "cz-conventional-changelog": "^3.0.2"
+    }
+}
