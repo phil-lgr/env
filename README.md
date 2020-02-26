@@ -118,6 +118,7 @@ Start the ssh-agent in the background:
 
 ```bash
 eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa_github
 ```
 
 Make dir `~/code`:
@@ -138,4 +139,10 @@ Copy dotfiles:
 
 ```enable
 chmod 755 ./scripts/*.sh
+```
+
+### Node
+
+```
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 ```
