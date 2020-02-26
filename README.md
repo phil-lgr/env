@@ -121,6 +121,17 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa_github
 ```
 
+And add this to `.bashrc` to automatically start the ssh-agen and add the keys:
+
+```
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add ~/.ssh/id_rsa_github
+```
+
 Make dir `~/code`:
 
 ```bash
@@ -141,8 +152,22 @@ Copy dotfiles:
 chmod 755 ./scripts/*.sh
 ```
 
+fs.inotify.max_user_watches=524288
+
 ### Node
 
 ```
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 ```
+
+### Docker
+
+Follow docs https://docs.docker.com/install/linux/docker-ce/debian/
+
+sudo groupadd docker
+
+newgrp docker
+
+sudo usermod -aG docker \$USER
+
+sudo systemctl enable docker
